@@ -1,0 +1,6 @@
+Temp (Fahrenheit) ,HR,SpO2,ECG_Type,Label
+95,70,97,Normal,Hypothermia
+210.56,110,92,Tachycardia,High Fever
+98.06,58,96,Bradycardia,Bradycardia
+98.78,65,93,Normal,Good Health
+100.04,102,88,Irregular,Fever + Tachycardia

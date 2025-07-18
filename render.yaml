@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flask-health-app
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn main:app
+    runtime: python
+    plan: free
+    autoDeploy: true

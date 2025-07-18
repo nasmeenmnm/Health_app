@@ -1,0 +1,121 @@
+Temperature_C,Temperature_F,HeartRate,SpO2,ECG_Status,Label,Disease,Cause,Symptoms,Solution,Treatment
+37.1,98.8,67,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.6,97.9,82,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.5,97.7,99,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.2,99,89,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.3,97.3,71,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.6,97.9,86,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.2,97.2,75,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.2,99,62,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.8,100,109,84,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.9,98.4,67,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+39.2,102.6,104,92,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+39.7,103.5,115,93,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.5,97.7,75,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37,98.6,85,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.7,98.1,88,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.2,99,83,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.1,97,70,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+35.6,96.1,139,88,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+35.2,95.4,135,87,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.5,97.7,73,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+35.3,95.5,48,89,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.1,97,98,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.7,98.1,89,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.6,97.9,88,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+39.3,102.7,106,91,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+37.1,98.8,87,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.2,97.2,86,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.6,99.7,48,82,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.3,97.3,91,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.2,97.2,71,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+34.7,94.5,102,91,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+37.1,98.8,78,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.6,97.9,65,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.5,97.7,76,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+38.9,102,55,91,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+38.4,101.1,58,82,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+37.1,98.8,99,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+39.4,102.9,49,91,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+35.3,95.5,55,84,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.4,97.5,78,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+39.7,103.5,108,85,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.5,97.7,84,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+38.3,100.9,42,88,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.6,97.9,79,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+35.4,95.7,130,85,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+39.5,103.1,40,80,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+34.9,94.8,128,92,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+35.6,96.1,56,91,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.5,97.7,82,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.3,97.3,84,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+39,102.2,57,85,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.4,97.5,85,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+34.7,94.5,49,81,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+35.3,95.5,108,93,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+38.5,101.3,125,93,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.1,97,65,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.7,98.1,64,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+34.8,94.6,47,81,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+37,98.6,78,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+38,100.4,48,80,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.4,97.5,84,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.2,99,98,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+38.2,100.8,137,88,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.2,97.2,89,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.1,97,85,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.3,97.3,89,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.8,98.2,64,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.5,97.7,78,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.7,98.1,63,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.7,98.1,86,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.5,97.7,92,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+35.7,96.3,40,91,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.5,97.7,94,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+39.2,102.6,107,89,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+35.8,96.4,43,88,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.9,98.4,95,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.7,98.1,82,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.8,98.2,82,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.5,97.7,79,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.1,98.8,95,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+38.5,101.3,131,83,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+35.2,95.4,123,88,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+40,104,44,92,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.3,97.3,69,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+34.7,94.5,109,90,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.2,97.2,78,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37,98.6,66,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.5,97.7,90,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+38.6,101.5,139,82,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.7,98.1,79,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+35.7,96.3,128,88,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+37.1,98.8,97,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+34.5,94.1,121,85,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+34.9,94.8,57,80,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+37.1,98.8,70,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+38.5,101.3,128,89,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.4,97.5,96,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.6,97.9,76,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37,98.6,87,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.2,97.2,65,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.7,98.1,84,96,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.1,98.8,64,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+35.2,95.4,56,81,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.1,97,65,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36,96.8,137,89,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.3,97.3,60,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.3,97.3,60,95,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+34.6,94.3,41,81,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.7,98.1,89,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.2,97.2,82,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+38.1,100.6,138,81,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.2,97.2,93,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.6,97.9,74,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.7,98.1,76,99,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+35.2,95.4,134,84,Abnormal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"
+36.7,98.1,70,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.6,97.9,75,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+36.8,98.2,99,98,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+37.1,98.8,62,97,Normal,Normal,Good Health,Healthy,No symptoms,Maintain hydration & exercise,Routine wellness
+34.8,94.6,118,89,Normal,Abnormal,"Possible Fever, Hypoxia, or Tachycardia",Infection / Respiratory Stress,"High/Low Temp, Fast/Slow HR, Low SpO2","Hydrate, Rest, Use pulse oximeter","Consult physician, give antipyretics or oxygen if advised"

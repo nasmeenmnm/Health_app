@@ -1,0 +1,392 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Welcome, {{ current_user.username }}</h1>
+<h2>Patient Health Monitoring Dashboard</h2>
+<h3>Patient Details </h3>
+<h4 style="color: #de4a4a;"> Name: <span style="color: #fa15d8;">{{ current_user.username }}</span></h4>
+<h4 style="color: #de4a4a;"> Age: <span style="color: #fa15d8;">{{ current_user.age }}</span></h4>
+<h4 style="color: #de4a4a;"> Gender: <span style="color: #fa15d8;">{{ current_user.gender }}</span></43>
+<form method="POST" action="/predict">
+  <button id="getDataBtn" type="submit" style="padding: 10px 20px; font-size: 16px;">
+    🔄 Input New Data
+  </button>
+</form>
+
+  <div style="text-align: center; margin-bottom: 20px;">
+    {% if label %}
+    <h3 style="color: #4ade80;">🏷️ Prediction: <span style="color: #facc15;">{{ label }}</span></h3>
+    {% endif %}
+
+    {% if disease %}
+       <h3 style="color: #4ade80;">🦠 Disease: <span style="color: #facc15;">{{ disease }}</span></h3>
+    {% endif %}
+
+    {% if cause %}
+     <h3 style="color: #4ade80;">⚠️ Cause: <span style="color: #facc15;">{{ cause }}</span></h3>
+    {% endif %}
+
+    {% if symptoms %}
+       <h3 style="color: #4ade80;">🤒 Symptoms: <span style="color: #facc15;">{{ symptoms }}</span></h3>
+    {% endif %}
+
+    {% if solution %}
+       <h3 style="color: #4ade80;">💡 Solution: <span style="color: #facc15;">{{ solution }}</span></h3>
+    {% endif %}
+
+    {% if treatment %}
+       <h3 style="color: #4ade80;">💊 Treatment: <span style="color: #facc15;">{{ treatment }}</span></h3>
+      
+    {% endif %}
+  </div>
+
+<div class="dashboard">
+  <div class="card">
+    <canvas id="tempGauge"></canvas>
+    <div class="label">Temperature (°F)</div>
+  </div>
+  <div class="card">
+    <canvas id="hrGauge"></canvas>
+    <div class="label">Heart Rate (bpm)</div>
+  </div>
+  <div class="card">
+    <canvas id="spo2Gauge"></canvas>
+    <div class="label">SpO₂ (%)</div>
+  </div>
+</div>
+
+<!-- ECG Graph -->
+<div class="card ecg-section">
+  <h3 style="color:#38bdf8">ECG Reading</h3>
+  <canvas id="ecgChart" height="100"></canvas>
+</div>
+<div class="button-container">
+  <button id="toggleHistoryBtn">📂 View History</button>
+</div>
+<!-- Hidden history table -->
+<div class="card" id="historyTable" style="display:none;">
+  <h3>User Input History</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Time (UTC)</th>
+        <th>Temp</th>
+        <th>HR</th>
+        <th>SpO2</th>
+        <th>ECG</th>
+        <th>Label</th>
+        <th>Disease</th>
+        <th>Cause</th>
+        <th>Symptoms</th>
+        <th>Solution</th>
+        <th>Treatment</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in history %}
+      <tr>
+        <td>{{ record.timestamp }}</td>
+        <td>{{ record.temp }}</td>
+        <td>{{ record.hr }}</td>
+        <td>{{ record.spo2 }}</td>
+        <td>{{ record.ecg }}</td>
+        <td>{{ record.label }}</td>
+        <td>{{ record.Disease }}</td>
+        <td>{{ record.Cause }}</td>
+        <td>{{ record.Symptoms }}</td>
+        <td>{{ record.Solution }}</td>
+        <td>{{ record.Treatment }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<form method="POST" action="/logout">
+  <button  type="submit" style="padding: 10px 20px; font-size: 16px;">
+    LOGOUT
+  </button>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+
+<script>
+const username = "safee123";
+const aioKey = "aio_fRqa43hqQooVHpsU2VDFpBy7v67P";
+
+
+  const latestData = {{ {
+    "temp": history[0]['temp'] if history|length > 0 else None,
+    "hr": history[0]['hr'] if history|length > 0 else None,
+    "spo2": history[0]['spo2'] if history|length > 0 else None
+  } | tojson }};
+
+function fetchFeed(feedKey) {
+  return fetch(`https://io.adafruit.com/api/v2/${username}/feeds/${feedKey}/data/last`, {
+    headers: { "X-AIO-Key": aioKey }
+  }).then(res => res.json()).then(data => parseFloat(data.value));
+}
+
+
+
+function createGauge(ctx, value, maxValue, icon, unit, minValue = 0) {
+  return new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [value - minValue, maxValue - value],
+        backgroundColor: ['#84cc16', '#334155'],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      cutout: '70%',
+      rotation: -90,
+      circumference: 180,
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: false },
+      }
+    },
+    plugins: [
+      {
+        id: 'centerLabel',
+        beforeDraw(chart) {
+          const { width, height, ctx } = chart;
+          const fontSize = height / 10;
+          ctx.save();
+          ctx.font = `bold ${fontSize}px sans-serif`;
+          ctx.fillStyle = '#ffffff';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+
+          const centerX = chart.chartArea.left + chart.chartArea.width / 2;
+          const centerY = chart.chartArea.top + chart.chartArea.height / 2;
+
+          let centerText = '';
+          if (ctx.canvas.id === 'tempGauge') {
+            centerText = `${icon}\n${value.toFixed(0)} ${unit}`;
+          } else if (ctx.canvas.id === 'hrGauge') {
+            centerText = `${icon}\n${value.toFixed(2)} ${unit}`;
+          } else if (ctx.canvas.id === 'spo2Gauge') {
+            centerText = `${icon}\n${value.toFixed(0)} ${unit}`;
+          }
+
+          const lines = centerText.split('\n');
+          lines.forEach((line, index) => {
+            const verticalOffset = fontSize * 0.10; // amount to push downward
+ctx.fillText(line, centerX, centerY + verticalOffset + index * fontSize * 0.9);
+
+          });
+
+          ctx.restore();
+        }
+      }
+    ]
+  });
+}
+
+
+
+
+
+
+
+
+let tempGauge, hrGauge, spo2Gauge;
+
+function updateGauges(tempF, hr, spo2) {
+  
+
+  if (!tempGauge) {
+    tempGauge = createGauge(document.getElementById("tempGauge"), tempF, 150, "🌡", "°F", 30);
+    hrGauge = createGauge(document.getElementById("hrGauge"), hr, 200, "❤️", "bpm");
+    spo2Gauge = createGauge(document.getElementById("spo2Gauge"), spo2, 100, "🫁", "%");
+  } else {
+    tempGauge.data.datasets[0].data = [tempF - 30, 150 - tempF];
+    tempGauge.options.plugins.datalabels.formatter = (value, context) => {
+      // Only show the label for the first segment (the green one)
+      return context.dataIndex === 0 ? `🌡\n${tempF.toFixed(1)} °F` : null;
+    };tempGauge.update();
+
+    hrGauge.data.datasets[0].data = [hr, 200 - hr];
+    hrGauge.options.plugins.datalabels.formatter = (value, context) => {
+      // Only show the label for the first segment
+      return context.dataIndex === 0 ? `❤️\n${hr.toFixed(1)} bpm` : null;
+    };hrGauge.update();
+
+    spo2Gauge.data.datasets[0].data = [spo2, 100 - spo2];
+    spo2Gauge.options.plugins.datalabels.formatter = (value, context) => {
+        // Only show the label for the first segment
+      return context.dataIndex === 0 ? `🫁\n${spo2.toFixed(1)} %` : null;
+    };spo2Gauge.update();
+  }
+}
+
+
+
+// ECG chart (like waveform)
+const ecgChart = new Chart(document.getElementById("ecgChart").getContext("2d"), {
+  type: 'line',
+  data: {
+    labels: [],
+    datasets: [{
+      label: 'ECG',
+      borderColor: '#3b82f6',
+      backgroundColor: 'transparent',
+      data: [],
+      tension: 0, // waveform sharpness
+      pointRadius: 0,
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      x: { display: true },
+      y: {
+        min: 1700,
+        max: 2500,
+        ticks: { color: '#ccc' },
+        grid: { color: '#334155' },
+        display:false
+      }
+    },
+    plugins: {
+      legend: {
+        labels: { color: '#f1f5f9' }
+      }
+    }
+  }
+});
+
+async function fetchEcgSeries(limit = 100) {
+  const url = `https://io.adafruit.com/api/v2/${username}/feeds/ecg/data?limit=${limit}`;
+  const res = await fetch(url, {
+    headers: { "X-AIO-Key": aioKey }
+  });
+  const data = await res.json();
+  return data.reverse().map(item => ({
+    time: new Date(item.created_at).toLocaleTimeString(),
+    value: parseFloat(item.value)
+  }));
+}
+
+async function refreshData() {
+  try {
+    // Only fetch ECG data
+    const ecgSeries = await fetchEcgSeries(100);
+
+    if (latestData.temp !== null && latestData.hr !== null && latestData.spo2 !== null) {
+      updateGauges(latestData.temp, latestData.hr, latestData.spo2);
+    }
+
+    // Update ECG chart
+    ecgChart.data.labels = ecgSeries.map((point, i) => i);
+    ecgChart.data.datasets[0].data = ecgSeries.map(point => point.value);
+    ecgChart.update();
+  } catch (err) {
+    console.error("Error loading ECG data:", err);
+  }
+}
+
+
+refreshData();
+let autoRefresh = setInterval(refreshData, 5000);
+
+
+// Toggle history
+document.getElementById("toggleHistoryBtn").onclick = () => {
+  const history = document.getElementById("historyTable");
+  if (history.style.display === "none") {
+    history.style.display = "block";
+  } else {
+    history.style.display = "none";
+  }
+};
+</script>
+
+<style>
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #67e8f9;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  background-color: #38bdf8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 1200px;
+  align-items: center;
+}
+
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #000;
+  text-align: center;
+}
+
+.label {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #a1a1aa;
+}
+
+.ecg-section {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #475569;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+td {
+  background-color: #1e293b;
+}
+
+</style>
+{% endblock %}
