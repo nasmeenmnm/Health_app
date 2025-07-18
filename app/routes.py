@@ -3,7 +3,7 @@ from flask_login import login_required, current_user
 import sqlite3, joblib, pandas as pd, requests
 import numpy as np
 from tensorflow.keras.models import load_model
-
+import os
 main = Blueprint('main', __name__)
 
 @main.route("/dashboard")
@@ -60,8 +60,8 @@ def dashboard():
 @login_required
 def predict():
     username = "safee123"
-    aio_key = "aio_fRqa43hqQooVHpsU2VDFpBy7v67P"
-
+    
+    ADAFRUIT_IO_KEY = os.getenv("ADAFRUIT_IO_KEY")
     def fetch(feed):
         url = f"https://io.adafruit.com/api/v2/{username}/feeds/{feed}/data/last"
         res = requests.get(url, headers={"X-AIO-Key": aio_key})
